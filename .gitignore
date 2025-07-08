@@ -20,6 +20,10 @@ __pycache__/
 *.db
 *.sqlite
 
+# But track the main dataset
+!Meteorite_Landings.csv
+!Anomalies.csv
+
 # --- Virtual environments ---
 env/
 venv/
