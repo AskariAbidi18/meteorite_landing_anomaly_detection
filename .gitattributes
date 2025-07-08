@@ -1,0 +1,10 @@
+# Force LF (Unix-style) endings for specific files to prevent Git warnings
+Meteorite_Landings.csv text eol=lf
+logic.ipynb text eol=lf
+
+# Optionally enforce LF for all notebooks and data files
+*.ipynb text eol=lf
+*.csv text eol=lf
+
+# Ensure Python files also use LF endings
+*.py text eol=lf

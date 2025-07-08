@@ -1,0 +1,51 @@
+# --- Python files ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+
+# --- Jupyter notebooks ---
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# --- Data files (prevent large/binary versioning) ---
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.json
+*.zip
+*.db
+*.sqlite
+
+# --- Virtual environments ---
+env/
+venv/
+ENV/
+.venv/
+
+# --- VS Code ---
+.vscode/
+
+# --- Logs and caches ---
+*.log
+*.bak
+.mypy_cache/
+.pyright/
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# --- OS system files ---
+.DS_Store
+Thumbs.db
+
+# --- Conda and pip ---
+pip-log.txt
+pip-delete-this-directory.txt
+conda-meta/
+
+# --- Dotenv files ---
+*.env
