@@ -5,4 +5,5 @@ anomalies = model()
 print(anomalies)
 
 plot_anomalies()
+
 anomalies.to_csv("anomalies.csv", index=False)
