@@ -1,49 +1,109 @@
 
-# Electricity Consumption Forecasting Model
+# Meteorite Landing Anomaly Detection
 
-## 🚀 Project Overview
+## 🌌 Project Overview
 
-This project is focused on forecasting electricity consumption using machine learning. It provides a full pipeline to train models and serve predictions via a FastAPI backend and a simple frontend interface.  
-There are **two variants available in different branches**:
-- ✅ **Daily Model**: Full pipeline including dataset download, model training, FastAPI backend, and frontend for production-ready daily electricity consumption forecasting.
-- ⚡ **Minute Model**: Experimental setup for minute-level forecasting with a working pipeline, useful for testing high-frequency prediction ideas.
+This project focuses on detecting anomalies in meteorite landing data using machine learning techniques. By analyzing historical meteorite landing records, the model identifies unusual patterns that could indicate significant events or errors in data collection.
 
 ---
 
-## 🌳 Project Structure
+## 📂 Project Structure
 
 ```plaintext
-electricity-consumption_model/
-├── app/                    # FastAPI backend (app/main.py)
-├── frontend/               # Simple frontend (frontend/index.html)
-├── notebooks/              # Jupyter notebooks for EDA and experimentation
-├── src/                    # Data processing and model training code
-├── requirements.txt        # Python dependencies
-├── run.py                  # Entry point to download dataset & train model
-├── .gitignore
-├── README.md
-└── ...
+meteorite_landing_anomaly_detection/
+├── data/                   # Raw and processed datasets
+│   ├── Meteorite_Landings.csv
+│   └── anomalies.csv
+├── notebooks/              # Jupyter notebooks for exploration and analysis
+│   └── logic.ipynb
+├── src/                    # Source code for data processing and modeling
+│   ├── data_preprocessing.py
+│   ├── model.py
+│   └── run.py
+├── .gitignore              # Git ignore file
+├── anomaly_plot.png        # Visual representation of detected anomalies
+├── enhanced_anomaly_plot.png
+└── README.md               # Project documentation
 ```
 
 ---
 
-## ⚡ Installation
+## 📦 Installation
 
-### 1️⃣ Clone the repository
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/AskariAbidi18/meteorite_landing_anomaly_detection.git
+   cd meteorite_landing_anomaly_detection
+   ```
+
+2. **Create and activate a virtual environment:**
+
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 🚀 Usage
+
+To run the anomaly detection pipeline:
 
 ```bash
-git clone https://github.com/AskariAbidi18/electricity-consumption_model.git
-cd electricity-consumption_model
+python src/run.py
 ```
 
-### 2️⃣ Create and activate a virtual environment
+This script will:
 
-```bash
-python -m venv env
-source env/bin/activate      # On Windows use: env\Scripts\activate
-```
+- Load and preprocess the meteorite landing dataset.
+- Train an anomaly detection model.
+- Output detected anomalies and save the results.
 
-### 3️⃣ Install dependencies
+---
+
+## 🧪 Jupyter Notebook
+
+For an interactive exploration of the data and model:
+
+1. Start Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+2. Open `notebooks/logic.ipynb` to follow along with the analysis.
+
+---
+
+## 📈 Visualizations
+
+The project includes visual representations of detected anomalies:
+
+- `anomaly_plot.png`: Initial anomaly detection results.
+- `enhanced_anomaly_plot.png`: Improved visualization with additional insights.
+
+---
+
+## 🛠️ Dependencies
+
+The project requires the following Python libraries:
+
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
+- seaborn
+
+Install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
@@ -51,72 +111,22 @@ pip install -r requirements.txt
 
 ---
 
-## ⚡ Running the Model Pipeline
-
-This will download the dataset, process it, and train the forecasting model:
-
-```bash
-python run.py
-```
-
-✔ The trained model will be saved locally and ready to be served via API.
-
----
-
-## ⚡ Running the FastAPI Backend
-
-Once the model is trained, start the API server:
-
-```bash
-cd app
-uvicorn main:app --reload
-```
-
-- The API will be available at `http://127.0.0.1:8000`
-- Example endpoint: `http://127.0.0.1:8000/predict`
-
----
-
-## ⚡ Running the Frontend
-
-After the API server is running:
-
-1. Open `frontend/index.html` in any browser.
-2. The frontend will interact with the FastAPI backend to show predictions.
-
----
-
-## 🌿 Branch Variants
-
-### ✅ Daily Model (Main Branch)
-
-- Full pipeline with dataset download, preprocessing, training, FastAPI backend, and frontend.
-- Suitable for practical daily-level electricity forecasting.
-
-### ⚡ Minute Model (Experimental Branch)
-
-- High-frequency (minute-level) model for experimentation.
-- Still has the full pipeline and serves predictions, but meant for testing and development.
-
-To switch branches:
-
-```bash
-git checkout minute-model
-```
-
----
-
 ## 🤝 Contributing
 
-Feel free to fork the repo, create branches, and submit pull requests.
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Create a new Pull Request.
 
 ---
 
-## ⚖️ License
+## 📄 License
 
-MIT License © 2025  
-See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-> Made with ⚡ by Askari Abidi
+> Made with 💫 by Askari Abidi
