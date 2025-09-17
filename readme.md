@@ -7,27 +7,6 @@ This project focuses on detecting anomalies in meteorite landing data using mach
 
 ---
 
-## 📂 Project Structure
-
-```plaintext
-meteorite_landing_anomaly_detection/
-├── data/                   # Raw and processed datasets
-│   ├── Meteorite_Landings.csv
-│   └── anomalies.csv
-├── notebooks/              # Jupyter notebooks for exploration and analysis
-│   └── logic.ipynb
-├── src/                    # Source code for data processing and modeling
-│   ├── data_preprocessing.py
-│   ├── model.py
-│   └── run.py
-├── .gitignore              # Git ignore file
-├── anomaly_plot.png        # Visual representation of detected anomalies
-├── enhanced_anomaly_plot.png
-└── README.md               # Project documentation
-```
-
----
-
 ## 📦 Installation
 
 To set up the project locally, follow these steps:
